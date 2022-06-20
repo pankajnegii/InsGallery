@@ -10,9 +10,20 @@ android {
         versionCode cfgs.versionCode
         versionName cfgs.versionName
     }
+
+    signingConfigs {
+        release {
+            keyAlias 'app_sign'
+            keyPassword '123456'
+            storeFile rootProject.file("app/base_cert")
+            storePassword '123456'
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false
+            signingConfig signingConfigs.release
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
