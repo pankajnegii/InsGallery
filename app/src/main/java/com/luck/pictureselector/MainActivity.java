@@ -69,6 +69,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private boolean needScaleSmall = true;
     private ItemTouchHelper mItemTouchHelper;
     private DragListener mDragListener;
+    //testt
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
